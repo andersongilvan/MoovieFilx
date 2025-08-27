@@ -2,6 +2,7 @@ package com.movieflix.Modules.Category.UseCases.UpdateCategoryUseCase;
 
 
 import com.movieflix.Modules.Category.DTO.CategoryDTO;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -17,7 +18,7 @@ public class UpdateCategoryController {
     private UpdateCategoryService service;
 
     @PutMapping
-    public ResponseEntity<CategoryDTO> updateCategory(@RequestBody CategoryDTO data) {
+    public ResponseEntity<CategoryDTO> updateCategory(@RequestBody @Valid CategoryDTO data) {
         var result = this.service.execute(data);
 
         return ResponseEntity.ok(result);

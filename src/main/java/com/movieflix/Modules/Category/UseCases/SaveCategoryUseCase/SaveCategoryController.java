@@ -2,6 +2,7 @@ package com.movieflix.Modules.Category.UseCases.SaveCategoryUseCase;
 
 import com.movieflix.Modules.Category.DTO.CategoryDTO;
 import com.movieflix.Modules.Category.DTO.CreateCategoryDTO;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +19,7 @@ public class SaveCategoryController {
     private SaveCategoryService service;
 
     @PostMapping
-    public ResponseEntity<CategoryDTO> saveCategory(@RequestBody CreateCategoryDTO data) {
+    public ResponseEntity<CategoryDTO> saveCategory(@RequestBody @Valid CreateCategoryDTO data) {
         var result = this.service.execute(data);
 
         System.out.println(result.toString());

@@ -1,4 +1,8 @@
 package com.movieflix.Modules.Category.DTO;
 
-public record CreateCategoryDTO(String name) {
+import jakarta.validation.constraints.NotBlank;
+
+public record CreateCategoryDTO(
+        @NotBlank(message = "Required field")
+        String name) {
 }
