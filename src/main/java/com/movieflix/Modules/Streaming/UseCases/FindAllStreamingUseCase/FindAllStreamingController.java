@@ -1,7 +1,7 @@
-package com.movieflix.Modules.Category.UseCases.ListCategoryUseCase;
+package com.movieflix.Modules.Streaming.UseCases.FindAllStreamingUseCase;
 
 
-import com.movieflix.Modules.Category.Entity.Category;
+import com.movieflix.Modules.Streaming.DTO.StreamingDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,18 +13,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/movieflix/category")
-public class FindAllCategoriesController {
+@RequestMapping("/moviefilx/streaming")
+public class FindAllStreamingController {
 
     @Autowired
-    private FindAllCategoriesService service;
+    private FindAllStreamingService service;
 
-    @GetMapping()
-    public ResponseEntity<Page<Category>> saveCategory(@PageableDefault(page = 0, size = 10, sort = "name")
-                                                       Pageable pageable) {
-        var result = service.execute(pageable);
+    @GetMapping
+    public ResponseEntity<Page<StreamingDTO>> findAllStreamings
+            (@PageableDefault(size = 10, sort = "name") Pageable page) {
+
+        var result = this.service.execute(page);
 
         return ResponseEntity.ok(result);
     }
-
 }

@@ -1,8 +1,8 @@
-package com.movieflix.Modules.Category.Exceptions;
+package com.movieflix.Modules.Exceptions;
 
 
-import com.movieflix.Modules.Category.Exceptions.DTO.MethodArgumentNotValidExceptionDTO;
-import com.movieflix.Modules.Category.Exceptions.DTO.RuntimeExceptionDTO;
+import com.movieflix.Modules.Exceptions.DTO.MethodArgumentNotValidExceptionDTO;
+import com.movieflix.Modules.Exceptions.DTO.RuntimeExceptionDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;

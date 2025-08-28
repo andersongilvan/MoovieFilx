@@ -1,4 +1,4 @@
-package com.movieflix.Modules.Category.Exceptions;
+package com.movieflix.Modules.Exceptions;
 
 public class ResourceAlreadyExistException extends RuntimeException{
     public ResourceAlreadyExistException(String message) {

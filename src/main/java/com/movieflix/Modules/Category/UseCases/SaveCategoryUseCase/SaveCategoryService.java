@@ -4,7 +4,7 @@ package com.movieflix.Modules.Category.UseCases.SaveCategoryUseCase;
 import com.movieflix.Modules.Category.DTO.CategoryDTO;
 import com.movieflix.Modules.Category.DTO.CreateCategoryDTO;
 import com.movieflix.Modules.Category.Entity.Category;
-import com.movieflix.Modules.Category.Exceptions.ResourceAlreadyExistException;
+import com.movieflix.Modules.Exceptions.ResourceAlreadyExistException;
 import com.movieflix.Modules.Category.Repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
